@@ -3,15 +3,23 @@
 -- Please read that file to know all available options :( 
 
 ---@type ChadrcConfig
-local M = {}
+local M = {
 
-M.base46 = {
-	theme = "onedark",
+  base46 = {
+    theme = "catppuccin",
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+    lsp = {
+      semantic_tokens = false,
+      signature = true,
+    },
+    telescope = { style = "borderless" },
+    cheatsheet = { theme = "grid" },
+
+    -- hl_override = {
+    -- 	Comment = { italic = true },
+    -- 	["@comment"] = { italic = true },
+    -- },
+  },
 }
 
 return M
