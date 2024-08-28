@@ -6,6 +6,7 @@ return {
       "css-lsp",
       "html-lsp",
       "isort",
+      "json-lsp",
       "lua-language-server",
       "prettier",
       "python-lsp-server",
