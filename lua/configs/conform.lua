@@ -17,10 +17,15 @@ local options = {
 
   format_on_save = {
     -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    async = false,
+    timeout_ms = 3500,
+    async = true,
     lsp_fallback = true,
   },
 }
 
-require("conform").setup(options)
+local conform = require "conform"
+
+conform.setup(options)
+conform.formatters.prettier = {
+  prepend_args = { "--prose-wrap", "always" },
+}

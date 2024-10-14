@@ -1,6 +1,6 @@
 return {
   "stevearc/conform.nvim",
-  event = "BufWritePre",
+  event = { "LspAttach", "BufReadPost", "BufNewFile" },
   config = function()
     require "configs.conform"
   end,

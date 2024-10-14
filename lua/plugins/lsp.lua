@@ -3,7 +3,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup {
-        ensure_installed = { "clangd", "tsserver", "pylsp" },
+        ensure_installed = { "clangd", "ts_ls", "pylsp" },
       }
     end,
   },
