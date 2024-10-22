@@ -9,9 +9,7 @@ return {
         build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
       },
     },
-    opts = function()
-      local conf = require "nvchad.configs.telescope"
-
+    opts = function(_, conf)
       conf.defaults.mappings.i = {
         ["<C-j>"] = require("telescope.actions").move_selection_next,
         ["<C-k>"] = require("telescope.actions").move_selection_previous,
@@ -19,7 +17,6 @@ return {
       }
 
       conf.extensions_list = { "themes", "terms", "fzf", "zoxide", "ui-select" }
-
       conf.extensions = require "configs.telescope-extensions"
 
       -- or
