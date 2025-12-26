@@ -1,7 +1,7 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.8",
+    tag = "v0.2.0",
     lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -26,13 +26,9 @@ return {
       },
     },
     opts = function(_, conf)
-      conf.defaults.mappings.i = {
-        ["<C-j>"] = require("telescope.actions").move_selection_next,
-        ["<C-k>"] = require("telescope.actions").move_selection_previous,
-        ["<Esc>"] = require("telescope.actions").close,
-      }
-
-      conf.extensions = require "configs.telescope-extensions"
+      local tconf = require "configs.telescope_conf"
+      conf.defaults.mappings.i = tconf.mappings
+      conf.extensions = tconf.extensions
 
       -- or
       -- table.insert(conf.defaults.mappings.i, your table)

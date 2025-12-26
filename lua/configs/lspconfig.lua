@@ -4,7 +4,6 @@ local configs = require("nvchad.configs.lspconfig").defaults()
 local servers = { "html", "cssls", "cmake", "ts_ls", "pylsp", "clangd" }
 vim.lsp.enable(servers)
 
--- special keymaps ... maybe no longer needed?
 local custom_on_attach = function(client, bufnr)
   configs.on_attach(client, bufnr)
   local map = vim.keymap.set
