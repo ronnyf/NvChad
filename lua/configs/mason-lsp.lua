@@ -7,6 +7,7 @@ local options = {
     "py_lsp",
     "python-lsp-server",
     "typescript-language-server",
+    "clangd",
   },
 }
 
