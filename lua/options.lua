@@ -12,7 +12,7 @@ opt.shiftwidth = 2
 opt.smartindent = true
 opt.expandtab = true
 opt.scrolloff = 8
-opt.colorcolumn = "100"
+opt.colorcolumn = "200"
 
 -- local lsp = vim.lsp
 -- lsp.set_log_level "trace"
